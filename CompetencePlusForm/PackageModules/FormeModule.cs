@@ -87,7 +87,7 @@ namespace CompetencePlus.PackageModules
                     this.Hide();
                 }
 
-                MessageBox.Show("tt");
+                
             }
         
         }

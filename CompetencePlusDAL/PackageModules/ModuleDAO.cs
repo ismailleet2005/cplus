@@ -46,7 +46,7 @@ namespace CompetencePlus.PackageModules
       {
 
           
-          string req = "insert into [Modules](Filiere_id,nom,duree,strategieEnseignement,apprentisage,evaluation,materiel,equipement,competence,presentation,description,Code,Precision_id) values("  + o.Id_f.Id + ",'" + o.Nom + "'," + o.Duree + ",'" + o.StrategieEnseignement + "','" + o.Apprentisage + "','" + o.Evaluation + "','" + o.Materiel + "','" + o.Equipement + "','" + o.Competence + "','" + o.Presentation + "','" + o.Description + "','" + o.Code + "',"+1+")";
+          string req = "insert into [Modules](Filiere_id,nom,duree,strategieEnseignement,apprentisage,evaluation,materiel,equipement,competence,presentation,description,Code) values("  + o.Id_f.Id + ",'" + o.Nom + "'," + o.Duree + ",'" + o.StrategieEnseignement + "','" + o.Apprentisage + "','" + o.Evaluation + "','" + o.Materiel + "','" + o.Equipement + "','" + o.Competence + "','" + o.Presentation + "','" + o.Description + "','" + o.Code + "')";
           return MyConnection.ExecuteNonQuery(req);
 
       }
@@ -55,7 +55,7 @@ namespace CompetencePlus.PackageModules
       {
 
           
-          string req = "update [Modules] set Filiere_id =" + o.Id_f.Id + ",nom = '" + o.Nom + "', duree = " + o.Duree + ",strategieEnseignement = '" + o.StrategieEnseignement + "',apprentisage = '" + o.Apprentisage + "', evaluation = '" + o.Evaluation + "',materiel = '" + o.Materiel + "',equipement = '" + o.Equipement + "',competence = '" + o.Competence + "',presentation = '" + o.Presentation + "',description = '" + o.Description + "',Code = '" + o.Code + "',Precision_id =" + 1 +" where id = "+o.ID;
+          string req = "update [Modules] set Filiere_id =" + o.Id_f.Id + ",nom = '" + o.Nom + "', duree = " + o.Duree + ",strategieEnseignement = '" + o.StrategieEnseignement + "',apprentisage = '" + o.Apprentisage + "', evaluation = '" + o.Evaluation + "',materiel = '" + o.Materiel + "',equipement = '" + o.Equipement + "',competence = '" + o.Competence + "',presentation = '" + o.Presentation + "',description = '" + o.Description + "',Code = '" + o.Code + "' where id = "+o.ID;
          return MyConnection.ExecuteNonQuery(req);
       }
 
